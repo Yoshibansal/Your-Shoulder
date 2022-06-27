@@ -57,7 +57,9 @@ def predict_cnn(model, img_batch):
     y_val_pred = model.predict(img_batch)
     print(y_val_pred)
 
-
+@app.route('/hy')
+def main():
+    return render_template('hybrid.html')
 
 @app.route('/')
 def hello_world():
