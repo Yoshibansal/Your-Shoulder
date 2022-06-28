@@ -1,11 +1,14 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 import pickle, string, util, cv2
 from tensorflow.keras.models import load_model
 import numpy as np
-
+import json, random
 
 app = Flask(__name__)
+app.static_folder = 'static'
 
+with open("script/script.json", 'r') as f:
+  data = json.load(f)
 
 ########################## ML Model ######################
 # load the model
@@ -61,9 +64,19 @@ def predict_cnn(model, img_batch):
 def main():
     return render_template('hybrid.html')
 
-@app.route('/')
-def hello_world():
+@app.route("/get")
+def get_bot_response():
+        userText = request.args.get('msg')
+        i = int(request.args.get('i'))
+        data2 = data['intents'][i]
+        i += 1
+        l = len(data2['responses'])
+        ques = data2['responses'][random.randint(0,l-1)]
+        # (userText, ques)
+        return ques
 
+@app.route('/')
+def home():
     ## ML Model
     vectorizer, clf, dic = load_model_ml()
     sen = 'I am great..'
