@@ -1,8 +1,9 @@
 from flask import Flask, render_template, request
 import pickle, string, util, cv2
-from tensorflow.keras.models import load_model
 import numpy as np
 import json, random
+from tensorflow.keras.models import load_model
+from tensorflow.keras.utils import pad_sequences
 
 app = Flask(__name__)
 app.static_folder = 'static'
@@ -12,8 +13,8 @@ with open("script/script.json", 'r') as f:
 
 ########################## ML Model ######################
 # load the model
-def load_model_ml():
-    with open('static/models/finalized_model.pkl', 'rb') as f:
+def load_ml_model():
+    with open('static/models/logistic/finalized_model.pkl', 'rb') as f:
         vectorizer, clf = pickle.load(f)
 
     # dictionary (convert the numeric result back to text)
@@ -40,7 +41,7 @@ def predict(sen, vectorizer, clf, dic):
 
 ######################### CNN Model ########################
 def load_cnn_model():
-    model = load_model('static/models/model-recent.h5')
+    model = load_model('static/models/emotion_cnn/model-recent.h5')
     return model
 
 def preprocess_image(img):
@@ -60,10 +61,13 @@ def predict_cnn(model, img_batch):
     y_val_pred = model.predict(img_batch)
     print(y_val_pred)
 
+## live on browser
 @app.route('/hy')
 def main():
     return render_template('hybrid.html')
 
+
+################### BOT #########################
 @app.route("/get")
 def get_bot_response():
         userText = request.args.get('msg')
@@ -75,10 +79,20 @@ def get_bot_response():
         # (userText, ques)
         return ques
 
+################### LSTM ######################
+def load_lstm_model():
+    with open('static/models/lstm/depression&suicide.pkl', 'rb') as f:
+        tokenizer, model = pickle.load(f)
+
+    
+
+
+
+################## MAIN ######################
 @app.route('/')
 def home():
     ## ML Model
-    vectorizer, clf, dic = load_model_ml()
+    vectorizer, clf, dic = load_ml_model()
     sen = 'I am great..'
     predict(sen, vectorizer, clf, dic)
 
