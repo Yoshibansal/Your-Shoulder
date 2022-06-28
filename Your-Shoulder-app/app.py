@@ -8,7 +8,7 @@ from tensorflow.keras.utils import pad_sequences
 app = Flask(__name__)
 app.static_folder = 'static'
 
-with open("script/script.json", 'r') as f:
+with open("static/script/script.json", 'r') as f:
   data = json.load(f)
 
 ########################## ML Model ######################

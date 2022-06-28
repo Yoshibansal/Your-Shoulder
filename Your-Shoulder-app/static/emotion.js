@@ -14,6 +14,9 @@ async function predict2() {
   while (isPredicting2) {
     const predictedClass = tf.tidy(() => {
       const img = webcam2.capture();
+
+	  // call python face detection
+
       const prediction = personnet.predict(img);
       return prediction.as1D().argMax();
     });
