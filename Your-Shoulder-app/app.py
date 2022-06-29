@@ -1,4 +1,3 @@
-import os
 from flask import Flask, render_template, request
 import pickle, string, util, cv2
 import numpy as np
