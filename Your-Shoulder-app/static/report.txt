@@ -1,0 +1,4 @@
+Are you having a Good day?, Hello, Neutral, joy
+What has been a major life disappointment?, I guess, Sucide, fear
+Have you ever had a brief period when you felt intensely fearful or distressed? What was that like?, School and college, depressing, joy
+How does your anger come out? Are you carrying any baggage or resentments from your past?, depressing, Sucide, joy
