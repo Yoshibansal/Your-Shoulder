@@ -95,8 +95,6 @@
       // Bot Response
       i = i+1;
       $.get("/get", { msg: rawText, i: i}).done(function (data) {
-        console.log(rawText);
-        console.log(data);
         const msgText = data;
         appendMessage(BOT_NAME, BOT_IMG, "left", msgText);
       });

@@ -1,7 +1,9 @@
+import os
 from flask import Flask, render_template, request
 import pickle, string, util, cv2
 import numpy as np
 import json, random
+from os.path import exists
 from tensorflow.keras.models import load_model
 from tensorflow.keras.utils import pad_sequences
 
@@ -11,17 +13,13 @@ app.static_folder = 'static'
 with open("static/script/script.json", 'r') as f:
   data = json.load(f)
 
-########################## ML Model ######################
-# load the model
-def load_ml_model():
-    with open('static/models/logistic/finalized_model.pkl', 'rb') as f:
+with open('static/models/lstm/depression&suicide.pkl', 'rb') as f:
+    tokenizer, model = pickle.load(f)
+
+with open('static/models/logistic/finalized_model.pkl', 'rb') as f:
         vectorizer, clf = pickle.load(f)
 
-    # dictionary (convert the numeric result back to text)
-    dic = {4: 'sadness', 3:'anger', 1:'love', 0:'fear', 2:'joy'}
-
-    return (vectorizer, clf, dic)
-
+########################## ML Model ######################
 
 #defining the function to remove punctuation
 def remove_punctuation(text):
@@ -29,13 +27,20 @@ def remove_punctuation(text):
     return punctuationfree
 
 # predict the output
-def predict(sen, vectorizer, clf, dic):
+def predict(sen, vectorizer, clf):
+
+    # dictionary (convert the numeric result back to text)
+    dic = {4: 'sadness', 3:'anger', 1:'love', 0:'fear', 2:'joy'}
+
     pun_sen = remove_punctuation(sen)
     vec_sen = vectorizer.transform([pun_sen])
     
     y_pred = clf.predict(vec_sen)
-    print(f'Input sentence: {sen}')
-    print("Prediction: ", dic[y_pred[0]])
+    # print(f'Input sentence: {sen}')
+    # print("Prediction: ", dic[y_pred[0]])
+
+    return dic[y_pred[0]]
+
 
 
 
@@ -77,13 +82,38 @@ def get_bot_response():
         l = len(data2['responses'])
         ques = data2['responses'][random.randint(0,l-1)]
         # (userText, ques)
+
+        remove_punctuation(userText)
+        pre = predict(userText, vectorizer, clf)
+        load_lstm_model(tokenizer, model, userText, pre)
+
         return ques
 
-################### LSTM ######################
-def load_lstm_model():
-    with open('static/models/lstm/depression&suicide.pkl', 'rb') as f:
-        tokenizer, model = pickle.load(f)
 
+################### LSTM ######################
+def load_lstm_model(tokenizer, model, text, pre):
+
+    # Max number of words in each complaint.
+    MAX_SEQUENCE_LENGTH = 150
+
+    new_complaint = [text]
+    seq = tokenizer.texts_to_sequences(new_complaint)
+    padded = pad_sequences(seq, maxlen=MAX_SEQUENCE_LENGTH)
+    pred = model.predict(padded)
+    labels = ['Neutral', 'Sucide', 'Depressed']
+
+    path1 = 'static/report.txt'
+
+    if exists(path1):
+        file = open(path1, "a")
+        file.write(text + ', ' + labels[np.argmax(pred)] + ', ' + pre + '\n')
+        file.close()
+    else:
+        file = open(path1, "w")
+        file.write(text + ', ' + labels[np.argmax(pred)] + ', ' + pre + '\n')
+        file.close()
+
+    print(pred, labels[np.argmax(pred)])
     
 
 
@@ -92,15 +122,15 @@ def load_lstm_model():
 @app.route('/')
 def home():
     ## ML Model
-    vectorizer, clf, dic = load_ml_model()
-    sen = 'I am great..'
-    predict(sen, vectorizer, clf, dic)
+    # vectorizer, clf, dic = load_ml_model()
+    # sen = 'I am great..'
+    # predict(sen, vectorizer, clf, dic)
 
-    img = 'static/images/j1.jpeg'
-    ## CNN model
-    model = load_cnn_model()
-    img_batch = preprocess_image(img)
-    predict_cnn(model, img_batch)
+    # img = 'static/images/j1.jpeg'
+    # ## CNN model
+    # model = load_cnn_model()
+    # img_batch = preprocess_image(img)
+    # predict_cnn(model, img_batch)
 
     return render_template('index.html')
 
