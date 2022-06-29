@@ -84,13 +84,13 @@ def get_bot_response():
 
         remove_punctuation(userText)
         pre = predict(userText, vectorizer, clf)
-        load_lstm_model(tokenizer, model, userText, pre)
+        load_lstm_model(tokenizer, model, userText, pre, ques)
 
         return ques
 
 
 ################### LSTM ######################
-def load_lstm_model(tokenizer, model, text, pre):
+def load_lstm_model(tokenizer, model, text, pre, ques):
 
     # Max number of words in each complaint.
     MAX_SEQUENCE_LENGTH = 150
@@ -105,11 +105,11 @@ def load_lstm_model(tokenizer, model, text, pre):
 
     if exists(path1):
         file = open(path1, "a")
-        file.write(text + ', ' + labels[np.argmax(pred)] + ', ' + pre + '\n')
+        file.write(ques + ', ' + text + ', ' + labels[np.argmax(pred)] + ', ' + pre + '\n')
         file.close()
     else:
         file = open(path1, "w")
-        file.write(text + ', ' + labels[np.argmax(pred)] + ', ' + pre + '\n')
+        file.write(ques + ', ' + text + ', ' + labels[np.argmax(pred)] + ', ' + pre + '\n')
         file.close()
 
     print(pred, labels[np.argmax(pred)])
