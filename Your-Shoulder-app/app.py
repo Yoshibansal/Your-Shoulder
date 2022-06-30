@@ -70,6 +70,14 @@ def predict_cnn(model, img_batch):
 def main():
     return render_template('hybrid.html')
 
+@app.route("/res")
+def res_cnn_response():
+    print("Yoshiiiiidcndncdncndcdcdcdcd\n\n\n\n\n\n\n")
+    img = request.args.get('img')
+    img_batch = preprocess_image(img)
+    print("dcndncdncndcdcdcdcd\n\n\n\n\n\n\n")
+    return img_batch
+
 
 ################### BOT #########################
 @app.route("/get")
@@ -94,15 +102,18 @@ def load_lstm_model(tokenizer, model, text, pre, ques):
 
     # Max number of words in each complaint.
     MAX_SEQUENCE_LENGTH = 150
+    
+    pred = util.trigger(text)
+    if not pred:
+        new_complaint = [text]
+        seq = tokenizer.texts_to_sequences(new_complaint)
+        padded = pad_sequences(seq, maxlen=MAX_SEQUENCE_LENGTH)
+        pred = model.predict(padded)
 
-    new_complaint = [text]
-    seq = tokenizer.texts_to_sequences(new_complaint)
-    padded = pad_sequences(seq, maxlen=MAX_SEQUENCE_LENGTH)
-    pred = model.predict(padded)
     labels = ['Neutral', 'Sucide', 'Depressed']
 
     path1 = 'static/report.txt'
-
+    
     if exists(path1):
         file = open(path1, "a")
         file.write(ques + ', ' + text + ', ' + labels[np.argmax(pred)] + ', ' + pre + '\n')

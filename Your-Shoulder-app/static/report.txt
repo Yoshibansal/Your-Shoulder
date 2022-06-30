@@ -1,4 +1,8 @@
-Are you having a Good day?, Hello, Neutral, joy
-What has been a major life disappointment?, I guess, Sucide, fear
-Have you ever had a brief period when you felt intensely fearful or distressed? What was that like?, School and college, depressing, joy
-How does your anger come out? Are you carrying any baggage or resentments from your past?, depressing, Sucide, joy
+Are you having a Good day?, hy, Neutral, sadness
+Do you get mad easily?, nope, Sucide, joy
+Have you ever had a panic attack?, Yes sometimes, Sucide, fear
+How much is that bothering you? How long has that been going on?, yes.. the day I have to give presentation, Sucide, joy
+Tell me more about your family. What was it like growing up in your family?, for a long long time, Sucide, joy
+Are you finding yourself being clouded with negative thoughts, Everyone is great.. accept my aunty, Sucide, joy
+Hi there.How have you been feeling today?, hy, Neutral, sadness
+Are you having a Good day?, hy, Neutral, sadness

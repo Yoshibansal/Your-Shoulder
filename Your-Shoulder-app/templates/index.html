@@ -8,11 +8,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs/dist/tf.min.js"> </script>
+  <script src="{{url_for('static', filename='webcam.js')}}"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body>
   <!-- partial:index.partial.html -->
+  <div>
+		<div>
+			<video autoplay playsinline muted id="wc" width="324" height="324"></video>
+		</div>
+	</div>
+    <button type="button" id="startPredicting"class="start" onclick="startPredicting()" >Emotion Predicting</button>
+    <button type="button" id="stopPredicting" onclick="stopPredicting()" >Stop Emotion Predicting</button>
+    <div id="prediction1"></div>
+<!--    <button type="button"> U HE</button>-->
+    <div id="prediction2"></div>
+
   <section class="msger">
     <header class="msger-header">
       <div class="msger-header-title">
@@ -116,5 +129,5 @@
   </script>
 
 </body>
-
+<script src="{{url_for('static', filename='emotion.js')}}"></script>
 </html>

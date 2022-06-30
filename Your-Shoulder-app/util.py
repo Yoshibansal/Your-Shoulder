@@ -52,5 +52,21 @@ class face:
         # plt.imshow(gray_img);
         
         return gray_img
+
+
+
+def trigger(text):
+    ls = ['happy', 'jovial', 'joyful', 'love', 'like', 'content', 'glad', 'positive', 'cheery', 'active', 'energized', 'passionate', 'elated', 'excited', 'enthusiastic', 'lucky', 'yoshi', 'garvit', 'sonakshi', 'aabha', 'dhriti', 'hy', 'hello', 'hi']
+    dep = ['discourage', 'demotivated', 'sad', 'stubborn', 'not happy', 'pessimistic', 'miserable', 'suffer', 'pain', 'painful', 'grieving', 'harm', 'hurt', 'hurtful', 'unhappy', 'upset', 'low', 'regretful', 'gloomy', 'broken', 'demoralized', 'heartsick']
+    for _ in ls:
+        if _ in text.lower():
+            return [1, 0, 0]
+    for _ in dep:
+        if _ in text.lower():
+            return [0, 0, 1]
+    return 0
+
+
+
         
         
