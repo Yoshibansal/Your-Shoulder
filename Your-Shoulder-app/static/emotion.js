@@ -9,14 +9,16 @@ async function loadPersonnet() {
     return personnet;
 }
 
-function cnnResponse(img) {
-	// Video Response
-	console.log("Hy there I get called!! lets see about python")
-	$.get("/res", { img: img }).done(function () {
-	//   const msgImg = data;
-		console.log(img)
-	});
-  }
+// function cnnResponse(img1) {
+// 	// Video Response
+// 	console.log("Hy there I get called!! lets see about python");
+
+// 	$.get("/res", { img: img1 }).done(function () {
+// 	//   const msgImg = data;
+// 		console.log('img');
+// 	});
+
+//   }
 
 async function predict2() {
     console.log("predict emotion method");
@@ -25,7 +27,8 @@ async function predict2() {
       const img = webcam2.capture();
 
 	  // call python face detection
-	  cnnResponse(img);
+	//   cnnResponse(img);
+		// console.log(img)
 
       const prediction = personnet.predict(img);
       return prediction.as1D().argMax();

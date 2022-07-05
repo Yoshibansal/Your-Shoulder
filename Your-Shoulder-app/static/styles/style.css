@@ -27,6 +27,23 @@ body {
   font-family: Helvetica, sans-serif;
 }
 
+#startPredicting{
+  top: 80%;
+  left: 5%;
+  position: absolute;
+}
+#stopPredicting{
+  top: 80%;
+  left: 14%;
+  position: absolute;
+}
+
+#prediction2{
+  top: 83%;
+  left: 5%;
+  position: absolute;
+}
+
 .msger {
   display: flex;
   flex-flow: column wrap;

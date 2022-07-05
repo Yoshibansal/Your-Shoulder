@@ -44,9 +44,9 @@ def predict(sen, vectorizer, clf):
 
 
 ######################### CNN Model ########################
-def load_cnn_model():
-    model = load_model('static/models/emotion_cnn/model-recent.h5')
-    return model
+# def load_cnn_model():
+#     model = load_model('static/models/emotion_cnn/model-recent.h5')
+#     return model
 
 def preprocess_image(img):
     he = util.face(img)
@@ -61,22 +61,22 @@ def preprocess_image(img):
 
     return img_batch
 
-def predict_cnn(model, img_batch):
-    y_val_pred = model.predict(img_batch)
-    print(y_val_pred)
+# def predict_cnn(model, img_batch):
+#     y_val_pred = model.predict(img_batch)
+#     print(y_val_pred)
 
 ## live on browser
-@app.route('/hy')
-def main():
-    return render_template('hybrid.html')
+# @app.route('/hy')
+# def main():
+#     return render_template('hybrid.html')
 
-@app.route("/res")
-def res_cnn_response():
-    print("Yoshiiiiidcndncdncndcdcdcdcd\n\n\n\n\n\n\n")
-    img = request.args.get('img')
-    img_batch = preprocess_image(img)
-    print("dcndncdncndcdcdcdcd\n\n\n\n\n\n\n")
-    return img_batch
+# @app.route("/res", methods=['POST', 'GET'])
+# def res_cnn_response():
+#     print("Yoshiiiiidcndncdncndcdcdcdcd\n\n\n\n\n\n\n")
+#     img = request.args.get('img')
+#     img_batch = preprocess_image(img)
+#     print("dcndncdncndcdcdcdcd\n\n\n\n\n\n\n")
+#     return img_batch
 
 
 ################### BOT #########################
