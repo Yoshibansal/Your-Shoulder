@@ -1,19 +1,7 @@
-# Your-Shoulder
-Your personal psychologist
-
-About
-
-
-Aim
-
-
-Objective
-
-
-[![Contributors][contributors-shield]][contributors-url]
+<!-- [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
+[![Issues][issues-shield]][issues-url] -->
 [![MIT License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
@@ -25,10 +13,10 @@ Objective
     <img src="assets/images/logo.png" alt="Logo" width="130" height="130">
   </a>
 
-  <h3 align="center">Your Shoulder</h3>
+  <h2 align="center">Your Shoulder</h2>
 
   <p align="center">
-    Shoulder you can rely on
+    Your personal psychologist
     <br />
     <br />
     <a href="https://github.com/Yoshibansal/Your-Shoulder">View Demo</a>
@@ -39,11 +27,16 @@ Objective
   </p>
 </p>
 
+<a href = "https://github.com/Yoshibansal/Your-Shoulder/graphs/contributors">
+  <img src = "https://contrib.rocks/image?repo=Yoshibansal/Your-Shoulder"/>
+</a>
 
 ## Table of Contents
 
 * [About the Project](#about-the-project)
   * [Built With](#built-with)
+  * [Aim] (#aim)
+  * [Objective] (#objective)
 * [Getting Started](#getting-started)
   * [Prerequisites](#prerequisites)
   * [Installation](#installation)
@@ -115,15 +108,15 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/github_username/repo.svg?style=flat-square
+<!-- [contributors-shield]: https://img.shields.io/github/contributors/Yoshibansal/repo.svg?style=flat-square
 [contributors-url]: https://github.com/Yoshibansal/Your-Shoulder/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/github_username/repo.svg?style=flat-square
 [forks-url]: https://github.com/Yoshibansal/Your-Shoulder/network/members
 [stars-shield]: https://img.shields.io/github/stars/github_username/repo.svg?style=flat-square
 [stars-url]: https://github.com/Yoshibansal/Your-Shoulder/stargazers
 [issues-shield]: https://img.shields.io/github/issues/github_username/repo.svg?style=flat-square
-[issues-url]: https://github.com/Yoshibansal/Your-Shoulder/PARiKSHA/issues
-[license-shield]: https://img.shields.io/github/license/github_username/repo.svg?style=flat-square
+[issues-url]: https://github.com/Yoshibansal/Your-Shoulder/PARiKSHA/issues -->
+[license-shield]: https://img.shields.io/github/license/Yoshibansal/repo.svg?style=flat-square
 [license-url]: https://github.com/Yoshibansal/Your-Shoulder/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/yoshi-bansal-404aa218b/
