@@ -1,7 +1,3 @@
-<!-- [![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url] -->
 [![MIT License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
@@ -35,8 +31,8 @@
 
 * [About the Project](#about-the-project)
   * [Built With](#built-with)
-  * [Aim] (#aim)
-  * [Objective] (#objective)
+  * [Aim](#aim)
+  * [Objective](#objective)
 * [Getting Started](#getting-started)
   * [Prerequisites](#prerequisites)
   * [Installation](#installation)
@@ -56,7 +52,12 @@
 * [Bootstrap](https://getbootstrap.com/)
 * [Flask](https://flask.palletsprojects.com/)
 * [Jinja](https://jinja.palletsprojects.com/)
+* [TensorFlow](https://www.tensorflow.org/)
 
+### Aim
+
+
+### Objective
 
 
 ## Getting Started
@@ -107,15 +108,6 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-<!-- [contributors-shield]: https://img.shields.io/github/contributors/Yoshibansal/repo.svg?style=flat-square
-[contributors-url]: https://github.com/Yoshibansal/Your-Shoulder/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/github_username/repo.svg?style=flat-square
-[forks-url]: https://github.com/Yoshibansal/Your-Shoulder/network/members
-[stars-shield]: https://img.shields.io/github/stars/github_username/repo.svg?style=flat-square
-[stars-url]: https://github.com/Yoshibansal/Your-Shoulder/stargazers
-[issues-shield]: https://img.shields.io/github/issues/github_username/repo.svg?style=flat-square
-[issues-url]: https://github.com/Yoshibansal/Your-Shoulder/PARiKSHA/issues -->
 [license-shield]: https://img.shields.io/badge/License-Apache_2.0-blue.svg
 [license-url]: https://github.com/Yoshibansal/Your-Shoulder/blob/master/LICENSE
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
