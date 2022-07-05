@@ -77,7 +77,7 @@ git clone https://github.com/Yoshibansal/Your-Shoulder.git
 ```
 2. Navigate to the repo folder
 ```sh
-cd Your-Shoulder
+cd Your-Shoulder/Your-Shoulder-app
 ```
 3. Install pip packages
 ```sh
