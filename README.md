@@ -117,7 +117,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 [issues-shield]: https://img.shields.io/github/issues/github_username/repo.svg?style=flat-square
 [issues-url]: https://github.com/Yoshibansal/Your-Shoulder/PARiKSHA/issues -->
 [license-shield]: https://img.shields.io/github/license/Yoshibansal/repo.svg?style=flat-square
-[license-url]: https://github.com/Yoshibansal/Your-Shoulder/blob/master/LICENSE.txt
+[license-url]: https://github.com/Yoshibansal/Your-Shoulder/blob/master/LICENSE
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/yoshi-bansal-404aa218b/
 [product-screenshot]: assets/images/About.png
