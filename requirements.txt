@@ -46,6 +46,7 @@ google-auth-oauthlib==0.4.6
 google-pasta==0.2.0
 graphviz==0.20
 grpcio==1.46.3
+gunicorn==20.1.0
 h11==0.13.0
 h5py==3.7.0
 helloyoshi==0.0.3
