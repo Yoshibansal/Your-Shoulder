@@ -6,10 +6,8 @@ itsdangerous==2.0.1
 Jinja2==3.0.3
 keras==2.8.0
 Keras-Preprocessing==1.1.2
-Markdown==3.3.7
 numpy==1.22.3
 opencv-python==4.6.0.66
-openpyxl==3.0.10
 pandas==1.4.2
 pickleshare==0.7.5
 Pillow==9.0.1
