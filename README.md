@@ -1,4 +1,4 @@
-[![MIT License][license-shield]][license-url]
+[![Apache_2.0 License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
 
@@ -103,7 +103,7 @@ See the [open issues](https://github.com/Yoshibansal/Your-Shoulder/issues) for a
 
 ## License
 
-Distributed under the MIT License. See `LICENSE` for more information.
+Distributed under the Apache_2.0 License. See [LICENSE](https://github.com/Yoshibansal/Your-Shoulder/blob/master/LICENSE) for more information.
 
 
 
