@@ -21,3 +21,5 @@ Hey how are you holding up?, Hy I am Yoshi, Neutral, sadness
 Hi there.How have you been feeling today?, Hy I am Yoshi Bansal, Neutral, sadness
 What changes could someone make that would really make you happy?, Not good.., Sucide, joy
 Do you feel sad, mad, hopeless, stuck, or something else?, Talk to me... 🥺, Sucide, joy
+Are you having a Good day?, hy, Neutral, sadness
+What brings you down or makes you feel blue?, no, Sucide, sadness
