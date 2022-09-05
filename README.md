@@ -54,6 +54,9 @@
 * [Jinja](https://jinja.palletsprojects.com/)
 * [TensorFlow](https://www.tensorflow.org/)
 
+### About
+* [Presentation link](https://www.canva.com/design/DAFKiYzyOW4/EBAXzK6smw2MjFizmftyMA/view?utm_content=DAFKiYzyOW4&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink)
+
 ### Aim
 
 
