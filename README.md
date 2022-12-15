@@ -62,6 +62,9 @@
 
 ### Objective
 
+- Affordable
+- Reachable
+
 
 ## Getting Started
 
